@@ -170,8 +170,17 @@ header {
   font-size: 20px;
 }
 
-.about-img {
-  width: 84%;
+.about-img{
+  margin-bottom: 20px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.about-img img {
+  width: 32%;
+  height: 32%; 
 }
 
 /* フォーム================================ */
