@@ -18,5 +18,4 @@ class ApplicationController < ActionController::Base
       redirect_to("/posts/index")
     end
   end
-
 end
