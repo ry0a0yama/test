@@ -65,3 +65,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg', '0.18.4'
 end
+
+# 追加項目
+gem 'hirb'   # モデルの出力結果を表形式で表示するGem
+gem 'hirb-unicode' # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
+
+group :development, :test do
+  gem 'pry-rails'  # irbの代わりにpryにする
+end
