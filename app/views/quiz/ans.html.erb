@@ -1,0 +1,14 @@
+<div class="main quiz-main">
+  <div class="quiz-message">
+    <% if $ans <= 6 %>
+      <h2>あなたは正答数８割超えで合格です</h2>
+      <h3><a href="/" class="btn signup">MIRAI</a></h3>
+    <% elsif $ans >= 8 && $ans <= 9 %>
+      <h2>あなたは正答数８割未満なので不合格です</h2>
+      <h3><a href="/quiz/top" class="btn signup">学び直す</a></h3>
+    <% else %>
+    <h2>前世で青山さんと何かありましたか？</h2>
+    <h3><a href="/quiz/penalty" class="btn signup">罪と罰</a></h3>
+    <% end %>
+  </div>
+</div>

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get "quiz/penalty" => "quiz#penalty"
+  get "quiz/ans" => "quiz#ans"
+  get "quiz/que5" => "quiz#que5"
+  get "quiz/que4" => "quiz#que4"
+  get "quiz/que3" => "quiz#que3"
+  get "quiz/que2" => "quiz#que2"
+  get "quiz/que1" => "quiz#que1"
+  get "quiz/top" => "quiz#top"
 
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
