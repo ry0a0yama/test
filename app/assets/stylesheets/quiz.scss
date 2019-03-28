@@ -101,7 +101,7 @@ body {
   font-weight: 500;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
-  margin: 80px 0px 30px;
+  margin: 80px 0px 35px;
 }
 
 .quiz-img{
@@ -119,11 +119,18 @@ body {
 
 .left{
   margin: 0% 5% 0% 15%;
+}
 
+.left:hover{
+  transform: scale(1.3);	/* 要素の縮尺比率を指定する */
 }
 
 .right{
   margin: 0% 15% 0% 5%;
+}
+
+.right:hover{
+  transform: scale(1.2);	/* 要素の縮尺比率を指定する */
 }
 
 /* video ================================ */

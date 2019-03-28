@@ -47,7 +47,7 @@ class QuizController < ApplicationController
     end
   end
   def ans
-    flash[:notice]="正解！青山剛昌でした！"
+    flash.now[:notice]="正解！青山剛昌でした！"
     $ans = $que1 + $que2 + $que3 + $que4 + $que5
   end
   def penalty

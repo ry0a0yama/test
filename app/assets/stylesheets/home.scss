@@ -277,9 +277,11 @@ header {
 
 /* 追加 ================================ */
 .link{
+  color: blue;
   opacity: 0;
   margin: 0px 0 0px;
 }
 .link:hover{
+
   opacity: 1;
 }
