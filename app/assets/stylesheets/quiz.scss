@@ -6,7 +6,7 @@ body {
   min-height: 1vh;
 }
 
-.main {
+.mainn {
   position: absolute;
   top: 64px;
   width: 100%;
@@ -16,7 +16,7 @@ body {
 }
 
 /* top ================================ */
-.top-main {
+.topp-main {
   padding: 150px 0 100px;
   text-align: center;
   position: absolute;
@@ -33,11 +33,11 @@ body {
   /* 変更確認 */
 }
 
-.top-message {
+.topp-message {
   position: relative;
 }
 
-.top-main h2 {
+.topp-main h2 {
   font-size: 48px;
   font-weight: 500;
   line-height: 1.3;
@@ -45,13 +45,13 @@ body {
   margin-bottom: 0px;
 }
 
-.top-main p {
+.topp-main p {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.top-main a {
+.topp-main a {
   color: white;
   font-size: 24px;
   margin-top: 0px;
@@ -143,6 +143,7 @@ body {
   /*background-image: image-url("top.jpg");*/
   /* 変更確認 */
 }
+
 .landing_video{
   width: 60%;
   height: 60%;
