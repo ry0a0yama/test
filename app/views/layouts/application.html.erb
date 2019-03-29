@@ -4,10 +4,9 @@
     <title>MIRAI</title>
     <%= favicon_link_tag 'ryo.jpg'%>
     <%= csrf_meta_tags %>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
@@ -20,6 +19,7 @@
           <%= link_to("MIRAI", "/") %>
         <% end %>
       </div>
+      <span class="menu-icon"><i class="fa fa-bars"></i></span>
       <ul class="header-menus">
         <% if @current_user %>
           <li>
@@ -39,9 +39,6 @@
           </li>
         <% else %>
           <li>
-            <%= link_to("MIRAIとは", "/about") %>
-          </li>
-          <li>
             <%= link_to("新規登録", "/signup") %>
           </li>
           <li>
@@ -56,7 +53,6 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
-
     <%= yield %>
   </body>
 </html>

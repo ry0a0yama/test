@@ -1,9 +1,64 @@
-<div class="main top-main">
-  <div class="top-message">
-    <h2>君のアイディアが形になる</h2>
-    <p>こんなアプリがあったらいいなを共有しよう</p>
-    <%= video_tag "/videos/ryo.mp4", class: "landing_video", loop: true, autoplay: true, muted: true %>
-    <br/>
-    <%= link_to("中野CTOはこちら", "/quiz/top", class:"link",  :style=>"font-size: 12px;") %>
+<div class="main">
+  <!-- top -->
+  <div class="ta top-main">
+    <div class="top-message">
+      <h2>君のアイディアが形になる</h2>
+      <p>こんなアプリがあったらいいなを共有しよう</p>
+      <%= video_tag "/videos/ryo.mp4", class: "landing_video", loop: true, autoplay: true, muted: true %>
+    </div>
+    <div class="">
+      <%= link_to("中野CTOはこちら", "/quiz/top", class:"link",  :style=>"font-size: 12px;") %>
+    </div>
+  </div>
+
+  <!-- about -->
+  <div class="ta about-main">
+    <h2>MIRAIとは</h2>
+    <h3><a href="http://quando.jp/" target="_blank">株式会社クアンド</a>の入社試験用に初めて自作したアプリ</h3>
+    <p>アプリの構造自体に目新しいもんはないけみんなのアイディアで価値あるもんにして欲しい</p>
+    <div class="about-img">
+      <img src="/about/about1.png">
+      <img src="/about/about2.png">
+      <img src="/about/about3.png">
+    </div>
+    <div class="about-img">
+      <img src="/about/about4.png">
+      <img src="/about/about5.png">
+      <img src="/about/about6.png">
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <div class="">
+        <div class="follow-us">
+          <a href="https://www.facebook.com/profile.php?id=100008160543500" class="social-icon ao" target='_blank'>
+            <span><i class="fa fa-facebook"></i></span>
+          </a>
+          <a href="https://twitter.com/RyonAoyama" class="social-icon ao" target='_blank'>
+            <span><i class="fa fa-twitter"></i></span>
+          </a>
+          <a href="https://www.instagram.com/ry0a0yama/?hl=ja" class="social-icon ak" target='_blank'>
+            <span ><i class="fa fa-instagram"></i></span>
+          </a>
+        </div>
+        <div class="copyright">©2019-
+          MIRAI
+        </div>
+      </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $('.social-icon').hover(
+    function(){
+      $(this).children('span').animate({
+        'font-size':'30px'
+      }, 300);
+    },
+    function(){
+      $(this).children('span').animate({
+        'font-size':'24px'
+      }, 300);
+    }
+  );
+</script>
