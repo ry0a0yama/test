@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   def data
     @users = User.all
     @posts = Post.all
+    @likes = Like.all
   end
 
 end

@@ -5,7 +5,7 @@
       <h2><%= @user.name %></h2>
       <% if @user.id == @current_user.id %>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
-        <%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %>
+        <%= link_to("削除", "/users/#{@user.id}/destroy", method: "post", data: {confirm: "本当に削除しますか？"}) %>
       <% end %>
     </div>
 

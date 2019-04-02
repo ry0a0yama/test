@@ -87,8 +87,16 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
-    @post = Post.find_by(user_id: params[:id])
-    @post.destroy
+    if Post.find_by(user_id: params[:id])
+      @post = Post.find_by(user_id: params[:id])
+      @post.destroy
+    end
+    if Like.find_by(user_id: params[:id])
+      @likes = Like.where(user_id: params[:id])
+      @likes.each do |likes|
+        likes.destroy
+      end
+    end
     flash[:notice] = "アカウントを削除しました"
     redirect_to("/signup")
   end

@@ -15,7 +15,7 @@
   </table>
   <table>
     <tr>
-      <th>ID</th>
+      <th>ユーザーID</th>
       <th>アプリ名</th>
       <th>概要</th>
       <th>理由</th>
@@ -26,6 +26,18 @@
       <td><%= post["name"] %></td>
       <td><%= post["content"] %></td>
       <td><%= post["reson"] %></td>
+    </tr>
+  <% end %>
+  </table>
+  <table>
+    <tr>
+      <th>ユーザーID</th>
+      <th>投稿ID</th>
+    </tr>
+  <% @likes.each do |like| %>
+    <tr>
+      <td><%= like["user_id"] %></td>
+      <td><%= like["post_id"] %></td>
     </tr>
   <% end %>
   </table>
