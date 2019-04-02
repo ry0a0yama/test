@@ -1,0 +1,32 @@
+<div class="main">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>名前</th>
+      <th>メアド</th>
+    </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user["id"] %></td>
+      <td><%= user["name"] %></td>
+      <td><%= user["email"] %></td>
+    </tr>
+  <% end %>
+  </table>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>アプリ名</th>
+      <th>概要</th>
+      <th>理由</th>
+    </tr>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post["user_id"] %></td>
+      <td><%= post["name"] %></td>
+      <td><%= post["content"] %></td>
+      <td><%= post["reson"] %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

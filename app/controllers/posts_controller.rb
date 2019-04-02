@@ -18,7 +18,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(
+      name: params[:name],
       content: params[:content],
+      reson: params[:reson],
       user_id: @current_user.id
     )
     if @post.save
@@ -35,7 +37,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
+    @post.name = params[:name]
     @post.content = params[:content]
+    @post.reson = params[:reson]
     if @post.save
       flash[:notice] = "投稿を編集しました"
       redirect_to("/posts/index")

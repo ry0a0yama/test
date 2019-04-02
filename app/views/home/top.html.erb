@@ -4,10 +4,7 @@
     <div class="top-message">
       <h2>君のアイディアが形になる</h2>
       <p>こんなアプリがあったらいいなを共有しよう</p>
-      <%= video_tag "/videos/ryo.mp4", class: "landing_video", loop: true, autoplay: true, muted: true %>
-    </div>
-    <div class="">
-      <%= link_to("中野CTOはこちら", "/quiz/top", class:"link",  :style=>"font-size: 12px;") %>
+      <%= video_tag "/videos/ryo.mp4", class: "landing_videos", loop: true, autoplay: true, muted: true %>
     </div>
   </div>
 
@@ -15,18 +12,19 @@
   <div class="ta about-main">
     <h2>MIRAIとは</h2>
     <h3><a href="http://quando.jp/" target="_blank">株式会社クアンド</a>の入社試験用に初めて自作したアプリ</h3>
-    <p>アプリの構造自体に目新しいもんはないけみんなのアイディアで価値あるもんにして欲しい</p>
+    <!--<p>アプリの構造自体に目新しいもんはないけみんなのアイディアで価値あるもんにして欲しい</p>-->
     <div class="about-img">
-      <img src="/about/about1.png">
-      <img src="/about/about2.png">
-      <img src="/about/about3.png">
-    </div>
-    <div class="about-img">
-      <img src="/about/about4.png">
-      <img src="/about/about5.png">
-      <img src="/about/about6.png">
+      <div class="slider">
+        <%= image_tag '/about/about1.png' %>
+        <%= image_tag '/about/about2.png' %>
+        <%= image_tag '/about/about3.png' %>
+        <%= image_tag '/about/about4.png' %>
+        <%= image_tag '/about/about5.png' %>
+        <%= image_tag '/about/about6.png' %>
+      </div>
     </div>
   </div>
+
   <!-- footer -->
   <div class="footer">
     <div class="">
@@ -43,6 +41,8 @@
         </div>
         <div class="copyright">©2019-
           MIRAI
+          <br/>
+          <%= link_to("中野CTOはこちら", "/quiz/top", class:"link",  :style=>"font-size: 12px;") %>
         </div>
       </div>
   </div>
@@ -61,4 +61,24 @@
       }, 300);
     }
   );
+  $(function() {
+    $('.slider').slick({
+      // 自動再生。trueで自動再生される。
+      autoplay: true,
+      // 自動再生で切り替えをする時間
+      autoplaySpeed: 3000,
+      // アクセシビリティ。左右ボタンで画像の切り替えをできるかどうか
+      accessibility: true,
+      // 切り替えのアニメーション。ease,linear,ease-in,ease-out,ease-in-out
+      cssEase: 'ease',
+      // 左右の次へ、前へボタンを表示するかどうか
+      arrows: false,
+      // タッチスワイプに対応するかどうか
+      swipe: true,
+      // 画像下のドット（ページ送り）を表示
+      dots: false,
+      // ドットのclass名をつける
+      dotsClass: 'dot',
+    });
+  });
 </script>

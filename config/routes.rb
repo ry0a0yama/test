@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get "quiz/penalty" => "quiz#penalty"
   get "quiz/ans" => "quiz#ans"
   get "quiz/que5" => "quiz#que5"
@@ -31,5 +32,6 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
 
+  get "/data" => "home#data"
   get "/" => "home#top"
 end

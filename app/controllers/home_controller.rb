@@ -4,4 +4,9 @@ class HomeController < ApplicationController
   def top
   end
 
+  def data
+    @users = User.all
+    @posts = Post.all
+  end
+
 end

@@ -5,9 +5,13 @@
         <img src="<%= "/user_images/#{@user.image_name}" %>">
         <%= link_to(@user.name, "/users/#{@user.id}") %>
       </div>
-      <p>
-        <%= @post.content %>
-      </p>
+      <% if @post.name %>
+      <p>アプリ名：<%= @post.name %></p>
+      <% end %>
+      <p>概要：<%= @post.content %></p>
+      <% if @post.reson %>
+      <p>理由：<%= @post.reson %></p>
+      <% end %>
       <div class="post-time">
         <%= @post.created_at.strftime("%Y-%m-%d %H:%M") %>
       </div>

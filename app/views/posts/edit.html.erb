@@ -9,7 +9,9 @@
               <%= message %>
             </div>
           <% end %>
-          <textarea name="content"><%= @post.content %></textarea>
+          <input name="name" value="<%= @post.name %>" placeholder="アプリ名">
+          <textarea name="content"  placeholder="アプリの概要"><%= @post.content %></textarea>
+          <textarea name="reson"  placeholder="理由"><%= @post.reson %></textarea>
           <input type="submit" value="保存">
         </div>
       </div>
