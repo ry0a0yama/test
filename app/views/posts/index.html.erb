@@ -9,7 +9,13 @@
           <div class="post-user-name">
             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
           </div>
+          <% if post.name %>
+          <%= link_to(post.name, "/posts/#{post.id}") %>
+          <% end %>
           <%= link_to(post.content, "/posts/#{post.id}") %>
+          <% if post.reson %>
+          <%= link_to(post.reson, "/posts/#{post.id}") %>
+          <% end %>
         </div>
       </div>
     <% end %>
