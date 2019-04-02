@@ -87,6 +87,8 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
+    @post = Post.find_by(user_id: params[:id])
+    @post.destroy
     flash[:notice] = "アカウントを削除しました"
     redirect_to("/signup")
   end
