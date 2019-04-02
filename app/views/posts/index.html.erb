@@ -10,11 +10,11 @@
             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
           </div>
           <% if post.name %>
-          <%= link_to(post.name, "/posts/#{post.id}") %>
+          <p>アプリ名：<%= link_to(post.name, "/posts/#{post.id}") %></p>
           <% end %>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
+          <p>概要：<%= link_to(post.content, "/posts/#{post.id}") %></p>
           <% if post.reson %>
-          <%= link_to(post.reson, "/posts/#{post.id}") %>
+          <p>理由：<%= link_to(post.reson, "/posts/#{post.id}") %></p>
           <% end %>
         </div>
       </div>
