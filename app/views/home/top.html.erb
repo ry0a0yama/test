@@ -8,6 +8,7 @@
     </div>
   </div>
 
+
   <!-- about -->
   <div class="ta about-main">
     <h2>MIRAIとは</h2>
@@ -42,10 +43,10 @@
             <span ><i class="fa fa-instagram"></i></span>
           </a>
         </div>
-        <div class="copyright">©2019-
+        <div class="copyright animsition">©2019-
           MIRAI
           <br/>
-          <%= link_to("中野CTOはこちら", "/quiz/top", class:"link",  :style=>"font-size: 12px;") %>
+          <%= link_to("中野CTOはこちら", "/quiz/top", class:"link animsition-link",  :style=>"font-size: 12px;") %>
         </div>
       </div>
   </div>
@@ -84,4 +85,28 @@
       dotsClass: 'dot',
     });
   });
+  $(function() {
+    $(".animsition").animsition({
+      inClass: 'fade-in',
+      outClass: 'fade-out',
+      inDuration: 1500,
+      outDuration: 800,
+      linkElement: '.animsition-link',
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+      loading: true,
+      loadingParentElement: 'body', //animsition wrapper element
+      loadingClass: 'animsition-loading',
+      unSupportCss: [
+        'animation-duration',
+        '-webkit-animation-duration',
+        '-o-animation-duration'
+      ],
+      //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay : false,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body'
+    });
+  });
+  
 </script>
